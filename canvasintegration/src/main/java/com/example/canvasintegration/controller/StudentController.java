@@ -7,27 +7,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
-@RequestMapping("/api")
-@CrossOrigin(origins = "*") // Allow cross-origin requests for testing; restrict in production.
+@RequestMapping("/api/students")
+@CrossOrigin(origins = "http://localhost:3000") // Allow CORS for React app
 public class StudentController {
 
     @Autowired
     private CanvasService canvasService;
 
-    @GetMapping("/courses")
-    public ResponseEntity<List<Map<String, Object>>> getCourses() {
-        List<Map<String, Object>> courses = canvasService.getCourses();
-        return ResponseEntity.ok(courses);
+    @GetMapping
+    public ResponseEntity<List<Student>> getAllStudents() {
+        return ResponseEntity.ok(canvasService.getAllStudents());
     }
 
-    @GetMapping("/quizzes/{quizId}/submissions")
-    public ResponseEntity<List<Map<String, Object>>> getQuizSubmissions(
-            @RequestParam String courseId,
-            @PathVariable String quizId) {
-        List<Map<String, Object>> submissions = canvasService.getQuizSubmissions(courseId, quizId);
-        return ResponseEntity.ok(submissions);
+    @GetMapping("/{id}")
+    public ResponseEntity<Student> getStudentById(@PathVariable String id) {
+        return ResponseEntity.ok(canvasService.getStudentById(id));
     }
 }

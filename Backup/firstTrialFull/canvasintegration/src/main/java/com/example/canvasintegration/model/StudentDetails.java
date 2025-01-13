@@ -1,11 +1,10 @@
 package com.example.canvasintegration.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Student {
+public class StudentDetails {
 
     private String id;
     private String name;
@@ -18,7 +17,7 @@ public class Student {
         private int rank;
         private int totalStudents;
 
-        // Getters and setters
+        // Getters and Setters
         public String getName() {
             return name;
         }
@@ -52,7 +51,7 @@ public class Student {
         }
     }
 
-    // Getters and setters
+    // Getters and Setters
     public String getId() {
         return id;
     }
