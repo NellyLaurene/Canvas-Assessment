@@ -1,0 +1,32 @@
+.student-profile {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fa;
+}
+
+.student-profile-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(83, 145, 111, 0.1);
+}
+
+@media (max-width: 768px) {
+  .student-profile-container {
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #53916f;
+  font-size: 1.2rem;
+}
