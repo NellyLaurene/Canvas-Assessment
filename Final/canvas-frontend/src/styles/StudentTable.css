@@ -1,0 +1,151 @@
+.table-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(83, 145, 111, 0.1);
+    overflow: hidden;
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(83, 145, 111, 0.1);
+}
+
+.students-table th {
+    background-color: #f8f9fa;
+    color: #53916f;
+    font-weight: 600;
+}
+
+.students-table tr:hover {
+    background-color: rgba(83, 145, 111, 0.05);
+}
+
+.student-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #53916f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.student-name {
+    display: flex;
+    align-items: center;
+}
+
+.view-details-btn {
+    background-color: #53916f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #457a5d;
+}
+
+@media (max-width: 768px) {
+    .students-table th,
+    .students-table td {
+        padding: 12px 15px;
+    }
+
+    .students-table {
+        font-size: 0.9rem;
+    }
+}
+
+/* StudentTable.css */
+.table-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.search-input,
+.course-filter {
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #FFFFFF;
+}
+
+.search-input {
+    flex-grow: 1;
+}
+
+.course-filter {
+    min-width: 200px;
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.students-table thead {
+    background-color: #f4f4f4;
+}
+
+.students-table th,
+.students-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.student-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #53916f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.view-details-btn {
+    background-color: #53916f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3;
+}
